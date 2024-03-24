@@ -1,0 +1,13 @@
+/*
+Theme Name: Ashe Child
+Theme URI: https://wp-royal.com/themes/item-ashe-pro/
+Author: Royal Flush
+Author URI: http://wp-royal.com/
+Description: Child. Clean and Minimalist WordPress theme.
+Version: 1.0
+Text Domain: ashe-pro
+Template: ashe-pro-premium
+Tags: blog, e-commerce, one-column, two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, custom-logo, featured-images, footer-widgets, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+@import url("../ashe-pro-premium/style.css");
