@@ -28,6 +28,9 @@ function add_custom_css() { ?>
 		});
 	</script>
 	<style>
+		.bfi_700 {
+			display: none;
+		}
 		[data-layout*="col2"] .blog-grid > li:nth-of-type(2n+2) {
 		    /*margin-right: 0;*/
 		    margin-right: 37px;
@@ -39,15 +42,32 @@ function add_custom_css() { ?>
 		  width: 100%;
 		  margin-right: 0;
 		}
+		[data-layout*="col2"] .blog-grid > li:nth-child(1) .size-ashe-grid-thumbnail {
+			display: none;
+		}
+		[data-layout*="col2"] .blog-grid > li:nth-child(1) .bfi_700 {
+			display: block;
+		}
 		[data-layout*="col2"] .blog-grid > li:nth-child(2) {
 		  width: 100%;
 		  margin-right: 0;
+		}
+		[data-layout*="col2"] .blog-grid > li:nth-child(2) .size-ashe-grid-thumbnail {
+			display: none;
+		}
+		[data-layout*="col2"] .blog-grid > li:nth-child(2) .bfi_700 {
+			display: block;
 		}
 		[data-layout*="col2"] .blog-grid > li:nth-child(3) {
 		  width: 100%;
 		  margin-right: 0;
 		}
-
+		[data-layout*="col2"] .blog-grid > li:nth-child(3) .size-ashe-grid-thumbnail {
+			display: none;
+		}
+		[data-layout*="col2"] .blog-grid > li:nth-child(3) .bfi_700 {
+			display: block;
+		}
 
 		[data-layout*="rsidebar"] .main-container, [data-layout*="lsidebar"] .main-container {
 		    float: left;
@@ -77,7 +97,7 @@ function add_custom_css() { ?>
 	<?php
 }
 
-add_action('pre_get_posts', 'myprefix_query_offset', 1 );
+//add_action('pre_get_posts', 'myprefix_query_offset', 1 );
 function myprefix_query_offset(&$query) {
 
 	if ( !is_admin() && $query->is_paged && $query->is_main_query() ) {
@@ -93,3 +113,4 @@ function myprefix_query_offset(&$query) {
 }
 
 require_once( get_stylesheet_directory(). '/inc/metaboxes/gmb-admin.php' );
+require_once 'core/load.php'; 
